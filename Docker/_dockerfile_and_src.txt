@@ -1,0 +1,13 @@
+ORIGINAL VERSIONS CAN BE FOUND IN THIS REPO
+
+Dockerfile -------------------------------
+FROM rust
+COPY . /rust
+WORKDIR /rust/hello_world
+RUN cargo build --release
+CMD cargo run
+
+Rust source code -------------------------
+fn main() {
+    println!("Hello, world!");
+}
